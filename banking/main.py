@@ -1,5 +1,13 @@
-from .bank.bank import Bank
-from .model.model import TransactionType
+import sys
+import os 
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+
+from bank.bank import Bank
+from model.model import TransactionType
+from datetime import datetime
+
+
 """
 Functional Requirements: 
 1. Customer will talk to bank
@@ -51,8 +59,9 @@ Flow:
 
 def main():
     bank=Bank()
-    bank.create_account("sandeep")
-    bank.create_account("ajay")
+    bank.create_account("sandeep",220, datetime.now())
+    bank.create_account("ajay",100, datetime.now())
+    print("accounts added")
     bank.make_transaction("sandeep",10,TransactionType.DEPOSIT)
     
 

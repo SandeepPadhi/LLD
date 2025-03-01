@@ -1,6 +1,6 @@
-from ..lockmanager.lockmanager import LockManager 
-from ..storage.storage import InMemoryStorage
-from ..model.model import Transaction,Account,TransactionType,TransactionStatus
+from lockmanager.lockmanager import LockManager 
+from storage.storage import InMemoryStorage
+from model.model import Transaction,Account,TransactionType,TransactionStatus
 from queue import Queue
 import threading 
 
@@ -17,13 +17,14 @@ class TransactionManager:
     def _process_transactions(self):
         def process_transaction(self): 
             while True: 
+                print("yeahjhjkhh")
                 transaction=self.transaction_queue.get()
                 if transaction.transaction__type == TransactionType.TRANSFER:
                     self.process_transfer_transaction(transaction)
                 else: 
                     self.process_single_account_transaction(transaction)
         
-        thread=threading.Thread(target=process_transaction,daemon=True)
+        thread=threading.Thread(target=process_transaction,args=(self),daemon=True)
         thread.start()
 
     def save_transaction(self,transaction:Transaction):

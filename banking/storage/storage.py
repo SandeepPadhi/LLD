@@ -1,5 +1,5 @@
-from ..model.model import Account,Transaction
-from optional import List,Dict
+from model.model import Account,Transaction
+from typing import List,Dict
 from threading import Lock
 
 class InMemoryStorage: 
@@ -10,26 +10,26 @@ class InMemoryStorage:
         self._transactionLock=Lock()
     
     def save_account(self,account:Account):
-        with self._accountLock.acquire():
+        with self._accountLock:
             self._accounts[account.account_id]=account 
         
     def get_account(self,account_id:str):
-        with self._accountLock.acquire():
+        with self._accountLock:
             return self._accounts[account_id]
     
     def save_account(self,account:Account):
-        with self._accountLock.acquire():
-            return self._accounts[account.account_id]=account 
+        with self._accountLock:
+            self._accounts[account.account_id]=account 
     
     def save_transactions(self,transaction:Transaction):
-        with self._transactionLock.acquire():
+        with self._transactionLock:
             self._transactions[transaction.transaction_id]=transaction 
     
     def update_transactions(self,transaction:Transaction):
-        with self._transactionLock.acquire():
+        with self._transactionLock:
             self._transactions[transaction.transaction_id]=transaction 
     
     def get_transaction(self,transaction_id:str):
-        with self._transactionsLock.acquire():
+        with self._transactionsLock:
             return self._transaction[transaction_id]
     

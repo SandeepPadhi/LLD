@@ -6,10 +6,10 @@
     "configurations": [
         
         {
-            "name": "Python: Current File",
+            "name": "Python: Car Dealer File",
             "type": "python",
             "request": "launch",
-            "program": "/home/sandeep/Desktop/LLD/packprac/main.py",
+            "program": "/home/sandeep/Desktop/LLD/string_parsing/string_parser_stripe.py",
             "pythonPath": "/usr/bin/python3.8",
 
         }

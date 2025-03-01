@@ -1,7 +1,7 @@
 
 from threading import Lock
-from optional import Dict,List
-from ..model.model import Account
+from typing import Dict,List
+from model.model import Account
 from queue import Queue
 
 class LockManager:

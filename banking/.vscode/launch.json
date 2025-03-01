@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Python 3.8: Main Module",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+            "python": "/usr/bin/python3.8",  // Specify Python 3.8 path
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Python 3.8: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "python": "/usr/bin/python3.8",  // Specify Python 3.8 path
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Python 3.8: Module",
+            "type": "python",
+            "request": "launch",
+            "module": "banking.bank",  // Replace with your module path
+            "console": "integratedTerminal",
+            "python": "/usr/bin/python3.8",  // Specify Python 3.8 path
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
