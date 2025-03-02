@@ -9,7 +9,7 @@
             "name": "Python: Car Dealer File",
             "type": "python",
             "request": "launch",
-            "program": "/home/sandeep/Desktop/LLD/string_parsing/string_parser_stripe.py",
+            "program": "/home/sandeep/Desktop/LLD/sliding_window.py",
             "pythonPath": "/usr/bin/python3.8",
 
         }
