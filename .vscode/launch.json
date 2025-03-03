@@ -9,7 +9,7 @@
             "name": "Python: Car Dealer File",
             "type": "python",
             "request": "launch",
-            "program": "/home/sandeep/Desktop/LLD/sliding_window.py",
+            "program": "/home/sandeep/Desktop/LLD/data_transformer.py",
             "pythonPath": "/usr/bin/python3.8",
 
         }
