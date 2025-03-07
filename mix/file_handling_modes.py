@@ -1,3 +1,11 @@
+"""
+file.seek(offset,mode)
+
+mode=0 -> begining, 1-> current -> 2-> end
+
+"""
+
+
 # File Modes in Python - Explanation and Examples
 
 # Read Modes
