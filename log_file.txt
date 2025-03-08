@@ -1,2 +1,4 @@
-Hello sandeep
-what'sapp
+[2023-10-27 10:00:00] [INFO] [NETWORK] - Connection established
+[2023-10-27 10:01:00] [ERROR] [DATABASE] - Connection failed
+[2023-10-27 10:02:00] [WARNING] [SYSTEM] - Low disk space
+[2023-10-27 10:03:00] [ERROR] [APPLICATION] - Invalid input
