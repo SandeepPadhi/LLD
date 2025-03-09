@@ -9,9 +9,8 @@
             "name": "Python: Car Dealer File",
             "type": "python",
             "request": "launch",
-            "program": "/home/sandeep/Desktop/LLD/lru_cache.py",
-            "pythonPath": "/usr/bin/python3.8",
-
+            "program": "/Users/sandeeppadhi/Documents/interview_prep/LLD/lld_questions/api_router.py",
+            "pythonPath": "/usr/bin/python3",
         }
     ]
 }
