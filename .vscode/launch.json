@@ -9,7 +9,7 @@
             "name": "Python: Car Dealer File",
             "type": "python",
             "request": "launch",
-            "program": "/home/sandeep/Desktop/LLD/thread_regex.py",
+            "program": "/home/sandeep/Desktop/LLD/lru_cache.py",
             "pythonPath": "/usr/bin/python3.8",
 
         }
