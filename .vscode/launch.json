@@ -9,7 +9,7 @@
             "name": "Python: Fraud Detection",
             "type": "python",
             "request": "launch",
-            "program": "/Users/sandeeppadhi/Documents/interview_prep/LLD/lld_questions/word_ladder.py",
+            "program": "/Users/sandeeppadhi/Documents/interview_prep/LLD/debugging/deb1.py",
             "pythonPath": "/usr/bin/python3",
         }
     ]
