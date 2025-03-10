@@ -6,10 +6,10 @@
     "configurations": [
         
         {
-            "name": "Python: Car Dealer File",
+            "name": "Python: Fraud Detection",
             "type": "python",
             "request": "launch",
-            "program": "/Users/sandeeppadhi/Documents/interview_prep/LLD/lld_questions/api_router.py",
+            "program": "/Users/sandeeppadhi/Documents/interview_prep/LLD/lld_questions/word_ladder.py",
             "pythonPath": "/usr/bin/python3",
         }
     ]
