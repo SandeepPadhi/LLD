@@ -51,9 +51,6 @@ input_str_v4="""
 ]
 """
 
-
-
-
 class Activity(BaseModel):
     """
     hello
