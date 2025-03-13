@@ -4,13 +4,16 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+        {"name":"Python Debugger: Current File","type":"debugpy","request":"launch","program":"${file}","console":"integratedTerminal"},
+
         
         {
-            "name": "Python: Fraud Detection",
+            "name": "Python: Multi Part problem solving",
             "type": "python",
             "request": "launch",
-            "program": "/Users/sandeeppadhi/Documents/interview_prep/LLD/debugging/deb1.py",
+            "program": "/Users/sandeeppadhi/Documents/interview_prep/LLD/multi_part_coding/main.py",
             "pythonPath": "/usr/bin/python3",
+    
         }
     ]
 }

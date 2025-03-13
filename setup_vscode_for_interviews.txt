@@ -1,0 +1,51 @@
+Ref:
+https://takeuforward.org/set-up/how-to-set-up-visual-studio-code-for-python-programming-cp-or-dsa/
+
+
+
+1. Use following json: put it in tasks.json
+
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile and run",
+            "type": "shell",
+            "command": "python3",
+            "args": [
+                "${relativeFile}",
+                "<",
+                "input.txt",
+                ">",
+                "output.txt"
+            ],
+            "presentation": {
+                "reveal": "never"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": {
+                "owner": "python",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceFolder}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        }
+    ]
+}
+
+
+
+
+2. To run on mac: cmd+shift+B

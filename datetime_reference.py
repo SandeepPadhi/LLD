@@ -67,3 +67,63 @@ print(f"Time from values: {time_from_values}")
 print(f"Hour: {current_time.hour}, Minute: {current_time.minute}, Second: {current_time.second}")
 
 print(f"str : {str(datetime.datetime.now().time())}")
+
+
+
+
+
+##########################################################################
+
+# To get input in specific format
+
+from datetime import datetime
+
+def parse_datetime_ymd_hms(datetime_string):
+    """Parses datetime in YYYY-MM-DD HH:MM:SS format."""
+    try:
+        return datetime.strptime(datetime_string, "%Y-%m-%d %H:%M:%S")
+    except ValueError:
+        return None
+
+def parse_datetime_mdy_hms(datetime_string):
+    """Parses datetime in MM-DD-YYYY HH:MM:SS format."""
+    try:
+        return datetime.strptime(datetime_string, "%m-%d-%Y %H:%M:%S")
+    except ValueError:
+        return None
+
+def parse_datetime_iso(datetime_string):
+    """Parses datetime in ISO 8601 format (YYYY-MM-DDTHH:MM:SS)."""
+    try:
+        return datetime.fromisoformat(datetime_string)
+    except ValueError:
+        return None
+
+def parse_datetime_mdy_hm(datetime_string):
+    """Parses datetime in MM/DD/YYYY HH:MM format."""
+    try:
+        return datetime.strptime(datetime_string, "%m/%d/%Y %H:%M")
+    except ValueError:
+        return None
+
+# Example usage
+datetime_str_ymd_hms = "2023-11-15 14:30:45"
+dt_obj_ymd_hms = parse_datetime_ymd_hms(datetime_str_ymd_hms)
+print(f"'{datetime_str_ymd_hms}': {dt_obj_ymd_hms}")
+
+datetime_str_mdy_hms = "11-15-2023 14:30:45"
+dt_obj_mdy_hms = parse_datetime_mdy_hms(datetime_str_mdy_hms)
+print(f"'{datetime_str_mdy_hms}': {dt_obj_mdy_hms}")
+
+datetime_str_iso = "2023-11-15T14:30:45"
+dt_obj_iso = parse_datetime_iso(datetime_str_iso)
+print(f"'{datetime_str_iso}': {dt_obj_iso}")
+
+datetime_str_mdy_hm = "11/15/2023 14:30"
+dt_obj_mdy_hm = parse_datetime_mdy_hm(datetime_str_mdy_hm)
+print(f"'{datetime_str_mdy_hm}': {dt_obj_mdy_hm}")
+
+# Example with invalid format
+invalid_datetime_str = "15/11/2023 14:30:45"
+invalid_dt_obj = parse_datetime_ymd_hms(invalid_datetime_str)
+print(f"'{invalid_datetime_str}': {invalid_dt_obj}")
