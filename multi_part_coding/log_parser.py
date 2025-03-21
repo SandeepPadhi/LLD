@@ -10,6 +10,7 @@ logs = [
 
 def parse_log(log):
     match = re.match(r"\[(\d+)\]\s+(\w+)\s+\[(\w+)\]\s+-\s+(.*)", log)
+    print(f"match:{match.group()}")
     if match:
         timestamp, level, module, message = match.groups()
         return {
